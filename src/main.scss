@@ -1,0 +1,419 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap");
+@import "config";
+@import "utils";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.4rem;
+    font-family: $font-primary;
+}
+a {
+    color: $text-color;
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    @media only screen and (max-width: 768px) {
+        justify-content: space-around;
+        padding-bottom: 0;
+    }
+
+    .header-logo {
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 2.8rem;
+        text-align: center;
+        height: 100%;
+        @media only screen and (max-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
+    .header-input-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        @media only screen and (max-width: 768px) {
+            gap: 0;
+        }
+
+        .header-input-nav__flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            color: $primary-color;
+            .user {
+                color: $primary-color;
+            }
+            .header-input-container {
+                position: relative;
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                }
+                i {
+                    position: absolute;
+                    color: $text-color;
+                    left: 15px;
+                    top: 12px;
+                    font-size: 2rem;
+                }
+                input {
+                    @include input(60rem);
+                }
+            }
+
+            i {
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .header-icon-display {
+                    display: none;
+                }
+            }
+
+            ul {
+                display: flex;
+                gap: 2rem;
+                li {
+                    position: relative;
+                }
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .cart {
+                position: absolute;
+                background-color: grey;
+                color: $secondary-color;
+                height: 18px;
+                width: 18px;
+                left: -8px;
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+        margin-right: 8rem;
+        position: relative;
+
+        @media only screen and (max-width: 768px) {
+            position: fixed;
+            width: 100%;
+            top: 80px;
+            left: 0;
+            display: none;
+            background-color: $primary-color;
+            z-index: 2;
+            padding: 2rem;
+            line-height: 3rem;
+            gap: 2rem;
+        }
+        .header-icon-fire {
+            width: 1.6rem;
+        }
+
+        li {
+            &:hover ul {
+                display: block;
+            }
+            &:first-child {
+                display: flex;
+                align-items: center;
+            }
+
+            ul {
+                position: absolute;
+                display: none;
+                top: 100%;
+                width: 9rem;
+                background-color: grey;
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                    background-color: $primary-color;
+                    padding: 0 2rem;
+                    color: white;
+                }
+
+                li {
+                    display: block;
+                    border-bottom: 1px solid #fff;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+
+            a {
+                @media only screen and (max-width: 768px) {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+.header-input-container-display {
+    display: none;
+    @media only screen and (max-width: 768px) {
+        position: relative;
+        display: flex;
+        margin: 2rem;
+        i {
+            position: absolute;
+            color: $text-color;
+            left: 15px;
+            top: 12px;
+            font-size: 2rem;
+        }
+        input {
+            @include input(100%);
+        }
+    }
+}
+
+.banner {
+    background-color: $primary-color;
+    color: $secondary-color;
+    text-align: center;
+    font-weight: 300;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.fa-bars {
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        color: red;
+        font-size: 3rem;
+    }
+}
+.fa-xmark {
+    color: red;
+    font-size: 3rem;
+}
+
+.modal-container {
+    @include modal-container();
+    .modal {
+        @include modal();
+
+        h3 {
+            @include modal-h3();
+        }
+        .modal-flex {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .modal-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 100px;
+                    width: 100px;
+                    object-fit: cover;
+                }
+                .modal-detail {
+                    h5 {
+                        font-size: 2rem;
+                        @media only screen and (max-width: 480px) {
+                            font-size: 1.6rem;
+                            text-align: center;
+                        }
+                    }
+                    div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.8rem;
+                        gap: 5px;
+                        margin-top: 1rem;
+                        .less {
+                            @include btn-quantity($primary-color);
+                        }
+                        .more {
+                            @include btn-quantity(green);
+                        }
+                    }
+                }
+                .modal-price {
+                    p {
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                    }
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        color: $primary-color;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        margin-top: 10px;
+                        font-weight: 700;
+                        border-radius: 50%;
+                        outline: 3px solid $primary-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-total {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10rem;
+        font-weight: 700;
+        font-size: 1.6rem;
+        @media only screen and (max-width: 480px) {
+            margin-right: 1rem;
+        }
+    }
+
+    .modal-btn-footer {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        button {
+            @include modal-btn();
+        }
+    }
+    i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: $primary-color;
+    }
+}
+.modal-saludo-container {
+    @include modal-container();
+    .modal-saludo {
+        @include modal();
+        h3 {
+            @include modal-h3();
+        }
+        .modal-saludo-text {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            button {
+                @include modal-btn();
+            }
+        }
+    }
+}
+
+// PAGINA USUARIO /////////////////////
+.user-container {
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    @media only screen and (max-width: 480px) {
+        margin: 20px;
+    }
+    .user-title {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        p {
+            color: $text-color;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+    }
+    .user-cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        gap: 2rem;
+        padding-top: 2rem;
+        @media only screen and (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+        .user-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            border: 1px solid #f4f4f4;
+            padding: 2rem;
+            width: 375px;
+            height: 183px;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+            }
+
+            .user-card-img {
+                padding: 1rem;
+                background-color: #f4f4f4;
+                border-radius: 50%;
+                img {
+                    width: 60px;
+                    object-fit: contain;
+                }
+            }
+            .user-data {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                h5 {
+                    font-size: 2rem;
+                    color: $primary-color;
+                }
+                p {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+                a {
+                    color: #006afd;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

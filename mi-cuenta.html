@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="stylesheet" href="/public/css/main.css" />
+            <title>Home Design - Mi Cuenta</title>
+            <script
+                src="https://kit.fontawesome.com/15bdec4e03.js"
+                crossorigin="anonymous"
+            ></script>
+        </head>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div id="menu-toggle-btn">
+                    <i class="fa-solid fa-bars" id="btn"></i>
+                </div>
+                <a href="/" class="header-logo">H O M E </br>D E S I G N</a>
+                <div class="header-input-nav">
+                    <div class="header-input-nav__flex">
+                        <div class="header-input-container">
+                            <input type="text" placeholder="¿Qué estás buscando?">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        
+                        <ul>
+                            <li>
+                                <a href="/mi-cuenta.html" class="user"><i class="fa-regular fa-user"></i></a></i>
+                            </li>
+                            <li class="header-icon-display"><i class="fa-regular fa-heart"></i></li>
+                            <li class="header-icon-display"><img src="./public/assets/icon-location.png" alt=""></li>
+                            <li id="add-cart">
+                                <button>
+                                    <img src="./public/assets/icons8-truck-24.png" alt="cart">
+                                </button>
+                                <span class="cart">2</span>
+                             </li>
+                         </ul>                    
+                    </div>
+                    
+                    <nav>
+                        <ul id="toggle-nav">
+                            <li class="header-nav-first">
+                                <a href="">Rebajas</a>
+                                <img src="./public/assets/icon-fire.png" alt="rebajas" class="header-icon-fire">
+                            </li>
+                            <li>
+                                <a href="">Colecciones</a>
+                            </li>
+                            <li>
+                                <a href="">Recámaras</a>
+                            </li>
+                            <li>
+                                <a href="">Comedores</a>
+                            </li>
+                            <li>
+                                <a href="">Salas</a>
+                            </li>
+                            <li>
+                                <a href="">Complementarios</a>
+                            </li>
+                            <li>
+                                <a href="">Colchones</a>
+                            </li>
+                            <li>
+                                <a href="">Decoración</a>
+                            </li>
+                            <li class="submenu">
+                                <a class="button-submenu">Blog <span><i class="fa-solid fa-caret-down"></i></span></a>
+                                <ul class="submenu-list">
+                                    <li><a href="">Novedades</a></li>
+                                    <li><a href="">Clientes</a></li>
+                                    <li><a href="">Reseñas</a></li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-input-container-display">
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </header>
+
+        <div class="banner">
+            <p>Compra hoy y obtén 5% adicional sólo como cliente premier</p>
+        </div>
+        <main class="user-container">
+            <div class="user-title">
+                <p>Home Design > Mi cuenta</p>
+                <h2>Mi cuenta</h2>
+            </div>
+            <section>
+                <div class="user-cards-container">
+                    <div class="user-card">
+                        <div class="user-card-img">
+                            <img src="/public/assets/user.png" alt="">
+                        </div>
+                        <div class="user-data">
+                            <h5>Mis datos</h5>
+                            <p>Editá tus datos personales, tus direcciones, tus tarjetas, y contraseñas</p>
+                            <a>Ir a Mis datos</a>
+                        </div>
+                    </div>
+                    <div class="user-card">
+                        <div class="user-card-img">
+                            <img src="/public/assets/carro-de-la-carretilla.png" alt="">
+                        </div>
+                        <div class="user-data">
+                            <h5>Mis compras</h5>
+                            <p>Seguí el estado de tus compras y consultá tus facturas.</p>
+                            <a>Ir a Mis compras</a>
+                        </div>
+                    </div>
+                    <div class="user-card">
+                        <div class="user-card-img">
+                            <img src="/public/assets/tarjeta-de-credito.png" alt="">
+                        </div>
+                        <div class="user-data">
+                            <h5>Mis créditos</h5>
+                            <p>Consultá el datalle de tus créditos y vencimientos de cuotas.</p>
+                            <a>Ir a Mis créditos</a>
+                        </div>
+                    </div>
+                    <div class="user-card">
+                        <div class="user-card-img">
+                            <img src="/public/assets/help.png" alt="">
+                        </div>
+                        <div class="user-data">
+                            <h5>Centro de ayuda</h5>
+                            <p>Realizá consultas y reclamos. Contactanos para poder ayudarte.</p>
+                            <a>Ir al Centro de ayuda</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="modal-container">
+            <div class="modal">
+                <h3>Productos</h3>
+                <div class="modal-flex">
+
+                    <div class="modal-grid">
+                        <img src="https://sommiercenter.com/media/catalog/product/cache/4a8af526f69bf9c1b9433882e28d9c6b/t/e/telgo_03.jpg" alt="colchón">
+                        <div class="modal-detail">
+                            <h5>Colchón 1 Plaza Telgo Dorado </h5>
+                            <div>
+                                <button class="less">-</button>
+                                <p class="total">1</p>
+                                <button class="more">+</button>
+                            </div>
+                        </div>
+                        <div class="modal-price">
+                            <p>$50.000</p>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="modal-grid">
+                        <img src="https://ascolta.design/wp-content/uploads/2022/06/ASCOLTA_Barda_Mesa-de-comedor-Puzolana_Baja_2-1-1536x1536.jpg" alt="mesa">
+                        <div class="modal-detail">
+                            <h5>Mesa comedor Puzolana</h5>
+                            <div>
+                                <button class="less">-</button>
+                                <p class="total">1</p>
+                                <button class="more">+</button>
+                            </div>
+                        </div>
+                        <div class="modal-price">
+                            <p>$15.000</p>
+                            <button>X</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-total">
+                    <p>Total: <span>$65.000</span></p>
+                </div>
+                <div class="modal-btn-footer">
+
+                    <button id="btn-compra">Comprar</button>
+                </div>
+                <i class="fa-solid fa-xmark" id="modal-close"></i>
+            </div>
+        </section>
+
+        <section class="modal-saludo-container">
+            <div class="modal-saludo">
+                <h3>Gracias por tu compra 🎉</h3>
+                <div class="modal-saludo-text">
+
+                    <p>Pronto, te enviaremos los detalles vía e-mail</p>
+                    <p>¡Que lo disfrutes!</p>
+                    <div class="modal-saludo-btn">
+                        <button id="btn-back">Volver</button>
+                    </div>
+                </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

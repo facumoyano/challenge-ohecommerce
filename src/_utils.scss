@@ -1,0 +1,57 @@
+@mixin btn-quantity($color) {
+    background-color: transparent;
+    border: 1px solid grey;
+    width: 2.4rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: $color;
+    cursor: pointer;
+}
+@mixin input($width) {
+    width: 60rem;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: $terciary-color;
+    padding: 1.4rem;
+    padding-left: 5rem;
+}
+@mixin modal-container() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: RGBA(0, 0, 0, 0.3);
+    transform: scale(0);
+    z-index: 1000;
+}
+@mixin modal {
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+}
+@mixin modal-h3 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+@mixin modal-btn {
+    padding: 10px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20rem;
+    font-size: 1.8rem;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
